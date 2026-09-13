@@ -1,21 +1,19 @@
 import java.util.ArrayList;
 import java.util.List;
 
-public class Member {
-    private String idMember;
-    private String nama;
+public class Member extends Pengguna{
     private List<Buku> daftarBuku;
 
     public Member(String idMember, String nama){
-        this.idMember = idMember;
-        this.nama = nama;
+        super(idMember, nama);
         this.daftarBuku = new ArrayList<>();
     }
 
     public String getIdMember(){
-        return idMember;
+        return id;
     }
 
+    @Override
     public String getNama(){
         return nama;
     }
